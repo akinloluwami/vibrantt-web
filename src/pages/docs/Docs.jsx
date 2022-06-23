@@ -24,7 +24,7 @@ function Docs() {
     },
 
     {
-      method: "GET",
+      method: "POST",
       url: "/extractcolors",
       description:
         "Extracts the dominant color and create a color palette from an image",
@@ -42,6 +42,13 @@ function Docs() {
           description: "The number of colors to return",
           required: false,
           default: "8",
+        },
+        {
+          name: "format",
+          type: "string",
+          description: "The format of the colors. Options: hex, rgb",
+          required: false,
+          default: "hex",
         },
       ],
     },
@@ -83,7 +90,7 @@ function Docs() {
           name: "hue",
           type: "string",
           description:
-            "The hue of the palette. Options (monochrome, light, dark, [hex code], red, orange, green, blue, purple, pink,)",
+            "The hue of the palette. Options : monochrome, light, dark, [hex code], red, orange, green, blue, purple, pink",
           required: false,
           default: "random",
         },
